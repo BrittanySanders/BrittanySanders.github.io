@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A quiet space for wonder, becoming, and the future." />
+  <title>for Future!</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --night: #0d1024;
+      --violet: #2b1f4f;
+      --gold: #f7c873;
+      --cream: #fff7e7;
+      --muted: #c9bfdc;
+      --glass: rgba(255, 255, 255, 0.1);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--cream);
+      font-family: Georgia, 'Times New Roman', serif;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(247, 200, 115, 0.18), transparent 26rem),
+        radial-gradient(circle at 82% 75%, rgba(132, 97, 204, 0.24), transparent 30rem),
+        linear-gradient(135deg, var(--night), var(--violet));
+    }
+
+    body::before,
+    body::after {
+      content: '';
+      position: fixed;
+      width: 18rem;
+      height: 18rem;
+      border: 1px solid rgba(247, 200, 115, 0.18);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    body::before { top: -8rem; right: -6rem; }
+    body::after { bottom: -10rem; left: -7rem; }
+
+    main {
+      width: min(100% - 3rem, 68rem);
+      min-height: 100vh;
+      margin: auto;
+      display: grid;
+      place-items: center;
+      padding: 4rem 0;
+    }
+
+    .card {
+      position: relative;
+      width: 100%;
+      padding: clamp(2.5rem, 8vw, 7rem) clamp(1.5rem, 8vw, 7rem);
+      text-align: center;
+      background: var(--glass);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 2rem;
+      box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(18px);
+      animation: rise 1.2s ease both;
+    }
+
+    .sun {
+      width: 5rem;
+      height: 5rem;
+      margin: 0 auto 2rem;
+      display: grid;
+      place-items: center;
+      color: var(--night);
+      font-size: 1.5rem;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0.7rem rgba(247, 200, 115, 0.1), 0 0 3rem rgba(247, 200, 115, 0.45);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--gold);
+      font-size: clamp(3rem, 10vw, 7rem);
+      font-weight: 400;
+      letter-spacing: -0.06em;
+      line-height: 0.95;
+    }
+
+    .lead {
+      max-width: 38rem;
+      margin: 1.5rem auto 0;
+      color: var(--muted);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.8;
+    }
+
+    blockquote {
+      max-width: 42rem;
+      margin: 4rem auto 0;
+      padding: 2rem 0 0;
+      border-top: 1px solid rgba(247, 200, 115, 0.35);
+      color: var(--cream);
+      font-size: clamp(1.45rem, 4vw, 2.5rem);
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    cite {
+      display: block;
+      margin-top: 1.25rem;
+      color: var(--gold);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.8rem;
+      font-style: normal;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      margin-top: 4rem;
+      color: rgba(255, 247, 231, 0.55);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(1.5rem); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="card" aria-labelledby="page-title">
+      <div class="sun" aria-hidden="true">✦</div>
+      <h1 id="page-title">for Future!</h1>
+      <p class="lead">A small place for bright ideas, quiet wonder, and all that is still becoming.</p>
+
+      <blockquote>
+        “What you seek is seeking you.”
+        <cite>— Rumi</cite>
+      </blockquote>
+
+      <footer>Keep going · Keep becoming</footer>
+    </section>
+  </main>
+</body>
+</html>
